@@ -1,38 +1,91 @@
-.App {
+/* General Styles */
+body {
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e9e9e9; /* Slightly off-white background for softer contrast */
+  color: #002855; /* WVU Blue */
+  padding: 20px;
+  margin: 0; /* Remove default margin */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styles */
+header {
+  background-color: #002855; /* WVU Blue */
+  padding: 20px 0;
+  border-bottom: 5px solid #ffc600; /* WVU Gold */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Logo Styles */
+header img {
+  height: 50px; /* Adjust to your preference */
+  margin-bottom: 10px;
+}
+
+/* Title Styles */
+header h1 {
+  color: #ffc600; /* WVU Gold */
+  margin: 0;
+}
+
+/* Question Styles */
+.question {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #ffc600; /* WVU Gold stripe on the side */
+}
+
+/* Option Button Styles */
+.option-button {
+  background-color: #ffc600; /* WVU Gold */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  color: #002855; /* WVU Blue */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.option-button:hover {
+  background-color: #e6b800; /* A darker gold for hover effect */
+  color: white; /* White text for better contrast on hover */
+}
+
+/* File Input Styles */
+.file-input {
+  margin: 20px;
+}
+
+/* File Input Button Styles */
+#quiz-file-input {
+  border: 1px solid #002855; /* WVU Blue */
+  background-color: #ffc600; /* WVU Gold */
+  color: #002855; /* WVU Blue */
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: pointer; /* Ensure it's clear it's clickable */
+}
+
+/* Responsive Design for Mobile Devices */
+@media only screen and (max-width: 600px) {
+  header img {
+    height: 40px; /* Smaller logo on smaller screens */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  header h1 {
+    font-size: 18px; /* Smaller text on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .question, .option-button, #quiz-file-input {
+    width: 90%; /* More consistent mobile experience */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .option-button {
+    padding: 8px 16px; /* Slightly smaller padding on smaller screens */
   }
 }
